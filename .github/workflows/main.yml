@@ -1,0 +1,26 @@
+name: CI-CD
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Construção da imagem Docker
+        run: echo "Docker Build"
+      - name: "Publicar a imagem no Docker hub"
+        run: echo "Docker Push"
+    CD:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Conectar com o Kubernetes
+          run: echo "Configuração do kubeconfig"
+        - name: Executar o deploy
+          run: "kubectl apply"
+          
+        
+      
+    
+  
