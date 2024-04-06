@@ -23,8 +23,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-            kraxatu/devops4devs-news:latest
-            kraxatu/devops4devs-news:v${{github.run_number}}
+            KraXatu/devops4devs-news:latest
+            KraXatu/devops4devs-news:v${{github.run_number}}
   CD:
       needs: [CI]
       runs-on: ubuntu-latest
