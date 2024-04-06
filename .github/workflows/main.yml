@@ -22,7 +22,7 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           push: true
-          tags:
+          tags: |
             kraxatu/devops4devs-news:latest
             kraxatu/devops4devs-news:${{ github.run_number }}
   CD:
